@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
-import AppContent from './components/AppContent.vue'; // <-- lowercase 'components'
+import ExampleComponent from './components/ExampleComponent.vue';
 
 const app = createApp({});
-app.component('example-component', AppContent);
-app.mount('#appp');
+app.component('example-component', ExampleComponent);
+app.mount('#app');

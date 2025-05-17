@@ -8,7 +8,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/js/app.ts'],
+            input: ['resources/js/app.js'],
             ssr: 'resources/js/ssr.ts',
             refresh: true,
         }),
@@ -24,6 +24,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
+            vue: 'vue/dist/vue.esm-bundler.js', // 👈 Add this line
             '@': path.resolve(__dirname, './resources/js'),
             'ziggy-js': resolve(__dirname, 'vendor/tightenco/ziggy'),
         },
